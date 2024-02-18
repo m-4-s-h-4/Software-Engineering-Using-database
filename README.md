@@ -31,7 +31,7 @@ The API defines the following endpoints:
 - To add a new courier with ID `courier1`, use the following command:
 
     ```bash
-    curl -X POST http://localhost:8080/couriers \
+    curl -X POST http://localhost:8081/couriers \
     -H "Content-Type: application/json" \
     -d '{"id": "courier1"}'
     ```
@@ -39,13 +39,13 @@ The API defines the following endpoints:
 - To retrieve all registered couriers, use the following command:
 
     ```bash
-    curl -X GET http://localhost:8080/couriers
+    curl -X GET http://localhost:8081/couriers
     ```
 
 - To add or update achievements for a courier with ID `courier1`, use the following command:
 
     ```bash
-    curl -X POST http://localhost:8080/couriers/courier1/achievements \
+    curl -X POST http://localhost:8081/couriers/courier1/achievements \
     -H "Content-Type: application/json" \
     -d '{
       "totalDeliveries": 10,
@@ -58,13 +58,13 @@ The API defines the following endpoints:
 - To retrieve achievements for a courier with ID `courier1`, use the following command:
 
     ```bash
-    curl -X GET http://localhost:8080/couriers/courier1/achievements
+    curl -X GET http://localhost:8081/couriers/courier1/achievements
     ```
 
 - To update or add current quest progress for a courier with ID `courier1`, use the following command:
 
     ```bash
-    curl -X POST http://localhost:8080/couriers/courier1/current-quest \
+    curl -X POST http://localhost:8081/couriers/courier1/current-quest \
     -H "Content-Type: application/json" \
     -d '{
       "ordersCompleted": 20,
@@ -79,6 +79,6 @@ The API defines the following endpoints:
 - To retrieve current quest progress for a courier with ID `courier1`, use the following command:
 
     ```bash
-    curl -X GET http://localhost:8080/couriers/courier1/current-quest
+    curl -X GET http://localhost:8081/couriers/courier1/current-quest
     ```
 **Note:** `courier1` is used as an example and already exists. Please use a different ID (e.g., `courier3`) to create a new courier.
